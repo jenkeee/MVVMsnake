@@ -12,10 +12,7 @@ namespace MyMVVM.ViewModel
         public IPosModel PosModel { get; }
 
 
-        public bool IsDead
-        {
-            get { return _isDead; }            
-        }
+        public bool IsDead => _isDead;       
         
           
 
