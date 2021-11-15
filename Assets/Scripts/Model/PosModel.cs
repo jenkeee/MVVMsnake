@@ -13,7 +13,8 @@ namespace MyMVVM.Model
             PosY = posY;
 
             MoveX = posX;
-            MoveY = posY;
+            MoveY = posY;           
+
         }
     }
 }
