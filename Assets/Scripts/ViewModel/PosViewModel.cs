@@ -1,40 +1,37 @@
 using System;
 using MyMVVM.Model;
 
-
 namespace MyMVVM.ViewModel
 {
     internal sealed class PosViewModel : IPosViewModel
     {
-
-        public bool _isDead;
+        private bool _isDead;
         public event Action<float, float> OnDirChange;
         public IPosModel PosModel { get; }
 
+        //public bool IsDead => _isDead;
 
-        public bool IsDead => _isDead;       
-        
-          
+        public bool IsDead 
+        { 
+            get { return _isDead; } 
+        }
 
         public PosViewModel(IPosModel posModel)
         {
             PosModel = posModel;
-            //_isDead = posView._isDead;
         }
 
 
-        public void ApplyMove(float posX, float posY)
+        public void ApplyMove(float moveX, float moveY)
         {
-            PosModel.MoveX -= posX;
-            PosModel.MoveY -= posY;
+            PosModel.MoveX += moveX;
+            PosModel.MoveY += moveY;
 
             if (PosModel.PosX <= 0)
             {
-                _isDead = true;
+               // _isDead = true;
             }
             OnDirChange?.Invoke(PosModel.MoveX, PosModel.MoveY);
         }
     }
 }
-
-

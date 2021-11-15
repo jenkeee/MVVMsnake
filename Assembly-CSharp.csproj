@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D7F4D920-2E00-F744-5CF5-40C99F270BF5}</ProjectGuid>
+    <ProjectGuid>{E3207F85-612C-7237-B948-A02B7B19F50C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,22 +56,16 @@
     <Analyzer Include="E:\VisualStudio\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ViewModel\HpViewModel.cs" />
-    <Compile Include="Assets\Scripts\Model\IHpModel.cs" />
-    <Compile Include="Assets\Scripts\View\HpView.cs" />
-    <Compile Include="Assets\Scripts\Model\HpModel.cs" />
-    <Compile Include="Assets\Scripts\View\DoDmg.cs" />
-    <Compile Include="Assets\MyScripts\MoveController.cs" />
+    <Compile Include="Assets\Scripts\View\Move\MoveUP.cs" />
     <Compile Include="Assets\Scripts\Starter.cs" />
-    <Compile Include="Assets\MyScripts\Model\IPosModel.cs" />
-    <Compile Include="Assets\MyScripts\Model\PosModel.cs" />
-    <Compile Include="Assets\Scripts\ViewModel\IHpViewModel.cs" />
-    <Compile Include="Assets\startMyMVVM.cs" />
-    <Compile Include="Assets\MyScripts\View\Move.cs" />
-    <Compile Include="Assets\MyScripts\ViewModel\IPosViewModel.cs" />
-    <Compile Include="Assets\MyScripts\View\PosView.cs" />
-    <Compile Include="Assets\MyScripts\View\MoveUp.cs" />
-    <Compile Include="Assets\MyScripts\ViewModel\PosViewModel.cs" />
+    <Compile Include="Assets\Scripts\ViewModel\IPosViewModel.cs" />
+    <Compile Include="Assets\Scripts\Model\PosModel.cs" />
+    <Compile Include="Assets\Scripts\View\PosView.cs" />
+    <Compile Include="Assets\Scripts\Model\IPosModel.cs" />
+    <Compile Include="Assets\Scripts\ViewModel\PosViewModel.cs" />
+    <Compile Include="Assets\Scripts\View\Move\MoveDown.cs" />
+    <Compile Include="Assets\Scripts\View\Move\MoveLeft.cs" />
+    <Compile Include="Assets\Scripts\View\Move\MoveRight.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
