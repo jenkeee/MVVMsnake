@@ -68,10 +68,11 @@
     <Compile Include="Assets\Scripts\View\Move\MoveDown.cs" />
     <Compile Include="Assets\Scripts\View\PosView.cs" />
     <Compile Include="Assets\Scripts\Model\IPosModel.cs" />
+    <Compile Include="Assets\Scripts\View\LivesView.cs" />
     <Compile Include="Assets\Scripts\ViewModel\PosViewModel.cs" />
     <Compile Include="Assets\Scripts\Model\ILivesModel.cs" />
     <Compile Include="Assets\Scripts\Model\LivesModel.cs" />
-    <Compile Include="Assets\Scripts\View\LivesView.cs" />
+    <Compile Include="Assets\Scripts\View\MinusLive.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

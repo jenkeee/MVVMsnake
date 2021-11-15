@@ -4,6 +4,6 @@ namespace MyMVVM.Model
     {
         int MaxLives { get; }
 
-        int CurrentLives { get; set; }
+        int CurrentLives { get; set; }       
     }
 }

@@ -5,7 +5,8 @@ namespace MyMVVM.ViewModel
 {
     public interface ILivesViewModel
     {
-        ILivesModel LivesModel { get; }        
+        ILivesModel LivesModel { get; }   
+        bool LivesOut { get; }
         void MinusLive(int minusLive);
         event Action<int> OnLivesCountChange;
     }

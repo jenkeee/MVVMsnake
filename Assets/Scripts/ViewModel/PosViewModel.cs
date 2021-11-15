@@ -27,7 +27,7 @@ namespace MyMVVM.ViewModel
         {
             PosModel.MoveX += moveX;
             PosModel.MoveY += moveY;
-            Debug.Log(PosModel.MoveX);
+           // Debug.Log(PosModel.MoveX);
             if (PosModel.MoveX <= -9 || PosModel.MoveX >= 9)
             {
                 _isDead = true;

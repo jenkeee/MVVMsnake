@@ -5,10 +5,11 @@ namespace MyMVVM.ViewModel
 {
     internal sealed class LivesViewModel : ILivesViewModel
     {
+        private bool _isDead;
         public event Action<int> OnLivesCountChange;
         public ILivesModel LivesModel { get; }
 
-        //public bool IsDead => _isDead;
+        public bool LivesOut => _isDead;
 
         public LivesViewModel(ILivesModel livesModel)
         {
@@ -21,7 +22,7 @@ namespace MyMVVM.ViewModel
             LivesModel.CurrentLives -= minuslives;
             if (LivesModel.CurrentLives <= 0)
             {
-               // _isDead = true;
+                _isDead = true;
             }
             OnLivesCountChange?.Invoke(LivesModel.CurrentLives);
         }

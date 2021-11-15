@@ -1,14 +1,18 @@
-namespace MyMVVM.Model
-{
-    internal sealed class LivesModel : ILivesModel
-    {
-        public int MaxLives { get; }
-        public int CurrentLives { get; set; }
+using MyMVVM.Model;
+using MyMVVM.ViewModel;
+using MyMVVM.View;
+using UnityEngine;
 
-        public LivesModel(int maxLives)
+namespace MyMVVM
+{
+    internal sealed class Lives : MonoBehaviour
+    {
+        private void Start()
         {
-            MaxLives = maxLives;
-            CurrentLives = MaxLives;
+            var livesModel = new LivesModel(3);
+            var livesViewModel = new LivesViewModel(livesModel);
+            FindObjectOfType<LivesView>().Initialize(livesViewModel);
+            FindObjectOfType<MinusLive>().Initialize(livesViewModel);
         }
     }
 }

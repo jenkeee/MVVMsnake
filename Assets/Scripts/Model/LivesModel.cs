@@ -1,18 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Lives : MonoBehaviour
+namespace MyMVVM.Model
 {
-    // Start is called before the first frame update
-    void Start()
+    internal sealed class LivesModel : ILivesModel
     {
-        
-    }
+        public int MaxLives { get; }
+        public int CurrentLives { get; set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public LivesModel(int maxLives)
+        {
+            MaxLives = maxLives;
+            CurrentLives = MaxLives;
+        }
     }
 }
