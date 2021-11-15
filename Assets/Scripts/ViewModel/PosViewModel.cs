@@ -24,12 +24,12 @@ namespace MyMVVM.ViewModel
 
         public void ApplyMove(float moveX, float moveY)
         {
-            PosModel.MoveX -= moveX;
-            PosModel.MoveY -= moveY;
+            PosModel.MoveX += moveX;
+            PosModel.MoveY += moveY;
 
             if (PosModel.PosX <= 0)
             {
-                _isDead = true;
+               // _isDead = true;
             }
             OnDirChange?.Invoke(PosModel.MoveX, PosModel.MoveY);
         }
