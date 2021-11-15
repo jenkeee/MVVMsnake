@@ -14,7 +14,7 @@ namespace MyMVVM.View
         {
             _posViewModel = posViewModel;
             _button.onClick.RemoveAllListeners();
-            _button.onClick.AddListener(() => _posViewModel.ApplyMove(_move.x,_move.y));
+            _button.onClick.AddListener(() => _posViewModel.ApplyMove(_move.x,_move.y));            
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using MyMVVM.Model;
+using UnityEngine;
 
 namespace MyMVVM.ViewModel
 {
@@ -26,11 +27,16 @@ namespace MyMVVM.ViewModel
         {
             PosModel.MoveX += moveX;
             PosModel.MoveY += moveY;
-
-            if (PosModel.PosX <= 0)
+            Debug.Log(PosModel.MoveX);
+            if (PosModel.MoveX <= -9 || PosModel.MoveX >= 9)
             {
-               // _isDead = true;
+                _isDead = true;
             }
+            else if (PosModel.MoveY <= -5 || PosModel.MoveY >= 5)
+            {
+                _isDead = true;
+            }
+
             OnDirChange?.Invoke(PosModel.MoveX, PosModel.MoveY);
         }
     }
